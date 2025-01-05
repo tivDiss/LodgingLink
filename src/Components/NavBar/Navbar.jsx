@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-import badge from '../Assets/badge.png'
+
+
+
 
 
 const Navbar = () => {
@@ -8,7 +10,7 @@ const Navbar = () => {
     return (
         <div className='navbar'>
             <div className="nav-logo">
-                <img className='badge'src={badge} alt=""/>
+               
                 <p>Drive.Com</p>
             </div>
             <ul className='nav-menu'>

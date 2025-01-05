@@ -3,19 +3,27 @@
     height: 80px;
     
 }
-.navbar{
-    display:flex;
+.navbar {
+    position: sticky; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    display: flex;
     justify-content: space-around;
-    padding: 16px;
+    padding: 10px 10px;
+    height: 50px;
     box-shadow: 0 1px 3px -2px black;
+    background: black;
+    z-index: 1000; 
 }
+
 .nav-logo{
     display: flex;
     align-items: center;
     gap:10px;
 }
 .nav-logo p{
-    color:rgba(12, 10, 11, 0.859);
+    color:white;
     font-size: 38px;
     font-weight: 600;
     
@@ -25,7 +33,7 @@
     align-items: center;
     list-style: none;
     gap: 50px;
-    color:#100f0ff2;
+    color:white;
     font-size:20px;
     font-weight: 500;
 }
@@ -42,5 +50,5 @@
     width:80%;
     height:3px;
     border-radius: 10px;
-    background-color: rgba(18, 146, 160, 0.908);
+    background-color: white;
 }

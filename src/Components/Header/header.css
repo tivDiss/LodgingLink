@@ -1,0 +1,85 @@
+.header {
+    height: 100vh;
+    margin: 0 auto;
+    background: url('./image_1.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the background image covers the entire container */
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    position: relative;
+    color: white; /* Default text color for better readability */
+    text-align: center; /* Centers the text */
+  }
+  
+  .header-contents {
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center; /* Centers items horizontally */
+    gap: 1rem; /* Adds spacing between elements */
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6); /* Optional: Dark overlay for text readability */
+    border-radius: 10px; /* Adds rounded corners to the overlay */
+  }
+  
+  .header-contents h1 {
+    font-size: clamp(3rem, 10vw, 8rem); /* Responsive font size between 3rem and 8rem */
+    margin: 0;
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+  
+  .header-contents p {
+    font-size: 1.2rem; 
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .header-contents button {
+    padding: 1vw 2.3vw;
+    font-size: max(1vw,13px);
+    background-color:white;
+    font-weight: 500;
+    color:black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header-contents button:hover {
+    background-color: #ed9c11;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .header {
+      height: 80vh; /* Reduce height on smaller screens */
+    }
+  
+    
+  
+    .header-contents p {
+      font-size: 1rem;
+    }
+  
+    .header-contents button {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      height: 70vh; /* Further reduce height on mobile screens */
+    }
+  
+    .header-contents h1 {
+      font-size: 1.5rem;
+    }
+  
+    .header-contents p {
+      font-size: 0.9rem;
+    }
+  
+    
+  }
+  
