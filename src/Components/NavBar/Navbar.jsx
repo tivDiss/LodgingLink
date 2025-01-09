@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-
+import { Link } from "react-router-dom";
 
 
 
@@ -14,10 +14,10 @@ const Navbar = () => {
                 <p>Drive.Com</p>
             </div>
             <ul className='nav-menu'>
-                <li onClick={()=>{setMenu("home")}}>Home{menu==="home"?<hr/>:<></>}</li>
+                <li onClick={()=>{setMenu("home")}}><Link to='/'className="nav-link">Home</Link>{menu==="home"?<hr/>:<></>}</li>
                 <li onClick={()=>{setMenu("vehicles")}}>Vehicles{menu==="vehicles"?<hr/>:<></>}</li>
-                <li onClick={()=>{setMenu("news")}}>News{menu==="news"?<hr/>:<></>}</li>
-                <li onClick={()=>{setMenu("contacts")}}>Contact{menu==="contacts"?<hr/>:<></>}</li>
+                <li onClick={()=>{setMenu("news")}}><Link to='/news' className="nav-link">News</Link>{menu==="news"?<hr/>:<></>}</li>
+                <li onClick={()=>{setMenu("contacts")}}><Link to='/contacts' className="nav-link">Contact</Link>{menu==="contacts"?<hr/>:<></>}</li>
             </ul>
 
         </div>
