@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./slideshow.css";
 
+
 const Slideshow = ({ images, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -30,9 +31,11 @@ const Slideshow = ({ images, interval = 3000 }) => {
   };
 
   return (
+   
     <div className="text">
       <h1>Find Your Dream Car</h1>
     <div className="content-container">
+         
       <div className="sub-content">
         <p>
           Ready to find your dream car? <br />
@@ -69,6 +72,7 @@ const Slideshow = ({ images, interval = 3000 }) => {
         </div>
       </div>
     </div>
+   
   );
   
 };

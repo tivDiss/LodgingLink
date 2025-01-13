@@ -6,6 +6,7 @@ import {Routes } from 'react-router-dom';
 import Home from './Pages/Home/home'
 import News from './Pages/News/news'
 import Contacts from './Pages/Contacts/contact';
+import Vehicles from './Pages/Vehicles/vehicle';
 import { Route } from 'react-router-dom';
 
 
@@ -22,6 +23,8 @@ const App= ()=> {
         < Route path='/' element={<Home/>} />
         < Route path='/news' element={<News/>} />
         < Route path='/contacts' element={<Contacts/>} />
+        < Route path='/vehicles' element={<Vehicles/>} />
+
       </Routes>
     
     </div>

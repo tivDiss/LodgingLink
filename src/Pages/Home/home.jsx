@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './home.css'
-import Header from '../../Components/Header/header'
+import Header2 from '../../Components/Header2/header2'
 import Benefits from '../../Components/Benefits/benefits'
 import Slideshow from '../../Components/SlideShow/slideshow'
 import Footer from '../../Components/Footer/footer'
@@ -21,7 +21,7 @@ const images = [image1, image2,image3,image4,image5]
 const home =()=> {
     return (
         <div>
-            <Header/>
+            <Header2/>
             <Benefits/>
             <Slideshow images={images} />
             <Footer/>
