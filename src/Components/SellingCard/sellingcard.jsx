@@ -8,6 +8,9 @@ const SellingCard = () => {
     price: "",
     mileage: "",
     year: "",
+    ownerName:"",
+    email:"",
+    contactNo:""
   });
   const [imageFile, setImageFile] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,6 +41,9 @@ const SellingCard = () => {
       formData.append("price", newCar.price);
       formData.append("mileage", newCar.mileage);
       formData.append("location", newCar.year);
+      formData.append("ownerName", newCar.ownerName);
+      formData.append("email", newCar.email);
+      formData.append("contactNo", newCar.contactNo);
 
       const response = await axios.post("http://localhost:5001/add-car", formData, {
         headers: {
@@ -47,7 +53,7 @@ const SellingCard = () => {
 
       if (response.data.success) {
         alert("Car added successfully to the database.");
-        setNewCar({ title: "", price: "", mileage: "", year: "" });
+        setNewCar({ title: "", price: "", mileage: "", year: "",ownerName:"",email:"",contactNo:"" });
         setImageFile(null);
         setIsModalOpen(false); // Close the modal
       } else {
@@ -73,6 +79,7 @@ const SellingCard = () => {
         <div className="modal-overlay">
           <div className="modal">
             <form onSubmit={addCar}>
+              <h2>Sell Your car</h2>
               <input
                 type="file"
                 name="image"
@@ -105,6 +112,28 @@ const SellingCard = () => {
                 name="year"
                 placeholder="Year"
                 value={newCar.location}
+                onChange={handleInputChange}
+
+              />
+               <input
+                type="text"
+                name="ownerName"
+                placeholder="Owner Name"
+                value={newCar.ownerName}
+                onChange={handleInputChange}
+              />
+                <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                value={newCar.email}
+                onChange={handleInputChange}
+              />
+                 <input
+                type="text"
+                name="contactNo"
+                placeholder="Contact No"
+                value={newCar.contactNo}
                 onChange={handleInputChange}
               />
               <button type="submit">Submit</button>

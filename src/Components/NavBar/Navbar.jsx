@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className='navbar'>
             <div className="nav-logo">
                
-                <p>Drive.Com</p>
+                <p>DRIVE.com</p>
             </div>
             <ul className='nav-menu'>
                 <li onClick={()=>{setMenu("home")}}><Link to='/'className="nav-link">Home</Link>{menu==="home"?<hr/>:<></>}</li>

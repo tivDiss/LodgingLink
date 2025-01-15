@@ -45,7 +45,7 @@ const Slideshow = ({ images, interval = 3000 }) => {
           Test drive your top picks and feel the thrill. <br />
           Happy hunting!
         </p>
-        <button className="b">Join us </button>
+        <button className="b" >Join us </button>
       </div>
         <div className="slideshow-container"> 
           <div
